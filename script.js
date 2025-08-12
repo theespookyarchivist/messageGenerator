@@ -10,3 +10,8 @@ const positiveWords = {
     level3: ['loved', 'cherished', 'enjoyed']
 };
 
+let affirmations = [];
+
+for (let affirm in positiveWords) {
+    let choosenAffirm = randomNumber(positiveWords[affirm].length);
+}
