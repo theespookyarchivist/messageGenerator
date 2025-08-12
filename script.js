@@ -6,26 +6,33 @@ function randomNumber(num) {
 
 const positiveWords = {
     level1: ['enough', 'wanted', 'needed'],
-    level2: ['capable', 'unstoppable', 'untouchable'],
+    level2: ['capable', 'unstoppable', 'deserving'],
     level3: ['loved', 'cherished', 'enjoyed']
 };
 
-let affirmations = [];
+let positivity = [];
 
 for (let affirm in positiveWords) {
     let choosenAffirm = randomNumber(positiveWords[affirm].length);
     
     switch(affirm) {
         case 'level1':
-            affirmations.push(`You are "${positiveWords[affirm][choosenAffirm]}".`);
+            positivity.push(`You are ${positiveWords[affirm][choosenAffirm]}.`);
             break;
         case 'level2':
-            affirmations.push(`You are "${positiveWords[affirm][choosenAffirm]}".`);
+            positivity.push(`You are ${positiveWords[affirm][choosenAffirm]}.`);
             break;
         case 'level3':
-            affirmations.push(`You are "${positiveWords[affirm][choosenAffirm]}".`);
+            positivity.push(`You are ${positiveWords[affirm][choosenAffirm]}.`);
             break;
         default:
-            affirmations.push('I hope you have a lovely day!');
+            positivity.push('I hope you have a lovely day!');
     }
 }
+
+function formatAffirmations(affirmations) {
+    const formatted = positivity.join('\n');
+    console.log(formatted);
+}
+
+formatAffirmations(positivity);
